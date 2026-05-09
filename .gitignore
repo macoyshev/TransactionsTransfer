@@ -1,0 +1,20 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+# Uv python-version
+.python-version
+
+# App
+transactions
+transactions_config.json
+.tbank_profile
+.gdrive_creds.json
+.gdrive_link

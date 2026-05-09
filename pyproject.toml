@@ -1,0 +1,46 @@
+[project]
+name = "transactions-transfer"
+version = "0.1.0"
+description = "Move transactions from tbank profile to google sheets"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    "google-auth>=2.52.0",
+    "gspread>=6.2.1",
+    "openpyxl>=3.1.5",
+    "pandas>=3.0.2",
+    "playwright>=1.59.0",
+    "typer>=0.25.1",
+]
+
+[dependency-groups]
+dev = [
+    "ruff>=0.15.12",
+    "ty>=0.0.34",
+]
+
+[tool.ruff.lint]
+select = ["ALL"]
+ignore = [
+    "COM812", # Missing trailing commas
+    "RUF001", # String contains ambiguous `с`
+    "RUF002", # Docstring contains ambiguous `с`
+    "D212", # Empty line befoce class docstring
+    "D203", # Long summary in docstring
+    "D205", # 1 blank line required between summary line and description
+    "D103", # Missing docstring in public function
+    "D104", # Missing docstring in public package
+    "D100", # Missing docstring in public module
+    "TRY003", # Avoid specifying long messages outside the exception class
+    "EM102", # Exception must not use an f-string literal, assign to variable first
+    "TC003", # Move standard library import into type-checking block
+    "FBT001", # Boolean-typed positional argument
+    "FBT002", # Boolean default positional argument
+    "ASYNC240", # Async functions should not use pathlib.Path methods
+    "ASYNC250", # Blocking call to input() in async context
+    "PLR0915", # Too many statements
+    "SIM105", # Use contextlib.suppress instead of try-except-pass
+    "PD011", # Use .to_numpy() or .array instead of .values
+    "RET504", # Unnecessary assignment to variable before return
+    "RUF003", # Comment contains ambiguous `с`
+]
