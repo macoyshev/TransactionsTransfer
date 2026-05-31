@@ -62,7 +62,6 @@ async def export_xlsx(
             "[!] Папка профиля не найдена. Сначала выполните авторизацию:",
             fg=typer.colors.RED,
         )
-        typer.echo("      python main.py login")
         raise typer.Exit(1)
 
     async with async_playwright() as p:
